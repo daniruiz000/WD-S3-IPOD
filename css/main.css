@@ -1,0 +1,107 @@
+/*COLORS*/
+/*FONTS*/
+/*SIZES*/
+/*CARD*/
+.card {
+  color: white;
+  background-color: black;
+  margin: 20px;
+  padding: 0;
+  width: 500px;
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  overflow: hidden;
+  /*CARD REVERSE*/
+}
+.card__header {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+.card__title {
+  margin: 0;
+  padding: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.card__img {
+  width: 35%;
+}
+.card__body {
+  margin: 0;
+  padding: 20px;
+}
+.card__subtitle {
+  margin: 20px 0;
+  padding: 0;
+  font-size: 30px;
+  font-weight: normal;
+  text-transform: none;
+}
+.card__description {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-weight: normal;
+  text-transform: none;
+  letter-spacing: 1px;
+  color: gray;
+}
+.card__footer {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 20px;
+}
+.card__button {
+  color: white;
+  background-color: black;
+  margin: 0;
+  padding: 15px;
+  font-size: 15px;
+  font-weight: normal;
+  text-transform: none;
+  border: 1px solid white;
+}
+.card__button:hover {
+  color: black;
+  background-color: white;
+}
+.card--reverse {
+  color: black;
+  background-color: white;
+}
+.card--reverse .card__title, .card--reverse .card__subtitle {
+  color: black;
+  background-color: white;
+}
+.card--reverse .card__description {
+  color: gray;
+  background-color: white;
+}
+.card--reverse .card__button {
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+}
+.card--reverse .card__button:hover {
+  color: white;
+  background-color: black;
+}
+
+body {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: white;
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+  font-family: monospace;
+}/*# sourceMappingURL=main.css.map */
