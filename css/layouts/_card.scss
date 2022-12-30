@@ -7,48 +7,38 @@
     width: $size-px * 25;
     box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
     border-radius: $size-px - 5px;
-    overflow: hidden;
-
     &__header{
-        @include flexible(flex, column, nowrap, center, center);
+        @include flex($direction:column, $justify-content:center, $align-items:center);
     }
-
     &__title{ 
         @include spaceling(0, $size-px);
-        @include text-type($size-px + 10px, bold, uppercase);
+        @include text-as($size-px + 10px, bold, $text-transform:uppercase);
     }
-
     &__img{
         width:35%;
     }
-
     &__body{
         @include spaceling(0,$size-px);
     }
-
     &__subtitle{
         @include spaceling($size-px 0 ,0);
-        @include text-type($size-px + 10px);
+        @include text-as($size-px + 10px);
     }
-
     &__description{
         @include spaceling(0 ,0);
-        @include text-type($size-px - 6px);
+        @include text-as($size-px - 6px);
         letter-spacing: 1px;
         color:$color-third;
     }
-
     &__footer{
-        @include flexible(flex, row, nowrap, center, center);
+        @include flex($justify-content:center, $align-items:center);
         @include spaceling(0, $size-px);
     }
-
     &__button{
         @include colorized($color-secundary, $color-primary);
         @include spaceling(0, $size-px - 5px);
-        @include text-type($size-px - 5px);
+        @include text-as($size-px - 2px);
         border: 1px solid $color-secundary;
-
         &:hover{
             @include colorized($color-primary, $color-secundary);
         }
@@ -58,7 +48,6 @@
 
     &--reverse{
         @include colorized($color-primary, $color-secundary);
-
         .card__title, .card__subtitle{
             @include colorized($color-primary, $color-secundary);
         }
@@ -68,11 +57,9 @@
         .card__button{
             @include colorized($color-primary, $color-secundary);
             border: 1px solid $color-primary;
-
             &:hover{
                 @include colorized($color-secundary, $color-primary);
             }
         }
-    }
-    
+    } 
 }

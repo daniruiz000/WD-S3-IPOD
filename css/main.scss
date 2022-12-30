@@ -1,15 +1,5 @@
+@import './utilities/variables';
+@import './utilities/mixin';
+@import './base/reset';
+@import './layouts/card';
 
-
-@import 'variables.scss';
-@import 'mixins.scss';
-@import 'card.scss';
-
-
-
-body{
-    @include flexible(flex, row, nowrap, center, center);
-    @include colorized($color-secundary, $color-secundary);
-    @include spaceling(0,$size-px);
-    min-height: 100vh;
-    font-family: $font-family;
-}

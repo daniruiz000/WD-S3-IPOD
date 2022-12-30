@@ -1,6 +1,100 @@
-/*COLORS*/
+@charset "UTF-8";
+/* Reseteamos los margin y paddings de todas las etiquetas */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+/* Evitamos problemas con las imagenes */
+img, picture, video, iframe, figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  /* opcional */
+  -o-object-fit: cover;
+     object-fit: cover;
+  /* opcional */
+  -o-object-position: center center;
+     object-position: center center;
+}
+
+/* Reseteamos los enlaces para funcionar como cajas... */
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+/* ... excepto los que se encuentran en párrafos */
+p a {
+  display: inline;
+}
+
+/* Quitamos los puntos de los <li> */
+li {
+  list-style-type: none;
+}
+
+/* Configuramos anclas suaves */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+  font-size: 1em;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Nivelamos problemas de tipografías y colocación de formularios */
+form, input, textarea, select, button, label {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+}
+
+/* Reseteamos las tablas */
+table, tr, td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Evitamos problemas con los SVG */
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
 /*FONTS*/
-/*SIZES*/
+/* Configuramos la tipografía para toda la web */
+body {
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: white;
+  font-family: Monospace, Arial, Sans-Serif;
+  min-height: 100vh;
+  font-size: 100%;
+  max-width: 1440px;
+}
+
 /*CARD*/
 .card {
   color: white;
@@ -10,20 +104,22 @@
   width: 500px;
   box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
   border-radius: 15px;
-  overflow: hidden;
   /*CARD REVERSE*/
 }
 .card__header {
   display: flex;
   flex-flow: column nowrap;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 .card__title {
   margin: 0;
   padding: 20px;
   font-size: 30px;
   font-weight: bold;
+  text-decoration: none;
+  text-align: initial;
+  font-style: initial;
   text-transform: uppercase;
 }
 .card__img {
@@ -38,6 +134,9 @@
   padding: 0;
   font-size: 30px;
   font-weight: normal;
+  text-decoration: none;
+  text-align: initial;
+  font-style: initial;
   text-transform: none;
 }
 .card__description {
@@ -45,6 +144,9 @@
   padding: 0;
   font-size: 14px;
   font-weight: normal;
+  text-decoration: none;
+  text-align: initial;
+  font-style: initial;
   text-transform: none;
   letter-spacing: 1px;
   color: gray;
@@ -52,8 +154,8 @@
 .card__footer {
   display: flex;
   flex-flow: row nowrap;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   margin: 0;
   padding: 20px;
 }
@@ -62,8 +164,11 @@
   background-color: black;
   margin: 0;
   padding: 15px;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: normal;
+  text-decoration: none;
+  text-align: initial;
+  font-style: initial;
   text-transform: none;
   border: 1px solid white;
 }
@@ -91,17 +196,4 @@
 .card--reverse .card__button:hover {
   color: white;
   background-color: black;
-}
-
-body {
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  background-color: white;
-  margin: 0;
-  padding: 20px;
-  min-height: 100vh;
-  font-family: monospace;
 }/*# sourceMappingURL=main.css.map */
